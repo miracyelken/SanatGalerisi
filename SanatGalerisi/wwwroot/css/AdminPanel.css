@@ -1,0 +1,230 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* İçerikleri navbar genişliği boyunca yay */
+    align-items: center; /* İçerikleri dikeyde ortala */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    height: 40px;
+}
+
+.brand {
+    font-size: 40px;
+}
+
+    .brand:hover .drive {
+        color: #FFA500; /* Altın renginin hover durumunda değişecek rengi */
+    }
+
+    .brand:hover .dreams {
+        color: #87CEEB; /* Mavi renginin hover durumunda değişecek rengi */
+    }
+
+
+.drive {
+    color: #FFD700; /* Altın rengi */
+}
+
+.dreams {
+    color: #6495ED; /* Mavi rengi */
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    padding: 20px;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .menu-button:hover {
+        background-color: #444;
+    }
+
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+
+.logout-button button {
+    background-color: transparent; /* Arka plan rengini saydam yap */
+    color: #fff; /* Yazı rengini beyaz yap */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #fff; /* Çerçeve rengi */
+}
+
+    .logout-button button:hover {
+        background-color: #ff0000; /* Hover durumunda arka plan rengini kırmızı yap */
+    }
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+
+.animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    font-size: 24px;
+    letter-spacing: .15em;
+    color: transparent; /* Metni görünmez yap */
+    font-family: 'Arial', sans-serif; /* Fontu ayarla */
+    animation: reveal 5s forwards; /* Animasyonu tanımla */
+    animation-delay: 1s; /* Animasyon gecikmesi */
+    position: relative; /* Konumu ayarla */
+    display: inline-block; /* Metni blok seviyesinde görüntüle */
+    width: auto; /* Otomatik genişlik */
+    max-width: 100%; /* Maksimum genişlik */
+    overflow: hidden; /* Taşma durumunda gizle */
+}
+
+@keyframes reveal {
+    0% {
+        max-width: 0; /* Metnin genişliğini sıfırla */
+    }
+
+    100% {
+        color: white; /* Sonunda metni beyaz renge dönüştür */
+        max-width: 100%; /* Metnin tam genişliği */
+    }
+}
+
+/*th, td {
+    color: black;/ / Yazı rengini siyah yap */
+/
+}
+
+/
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table td {
+    text-align: center; /* Yatayda ortala */
+    vertical-align: middle; /* Dikeyde ortala */
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.action-column {
+    width: 20%; /* Action sütununun genişliği ayarlandı */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Butonun üzerindeki varsayılan link vurgusunu kaldır */
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+
+/SİTE FOTOĞRAFI VE BAŞLIK GÜNCELLE KISMI(EDIT)/
+/* Formun genel görünümü */
+.form-horizontal {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* Form elemanlarına stiller eklenebilir */
+.form-group {
+    margin-bottom: 15px;
+}
+/* Label stilleri */
+.control-label {
+    font-weight: bold;
+}
+/* Input stilleri */
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+/* Buton stilleri */
+.btn {
+    padding: 8px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+    /* Butonun hover durumu */
+    .btn:hover {
+        background-color: #0056b3;
+    }

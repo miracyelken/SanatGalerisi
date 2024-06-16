@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<header>
+    <h1>Sanal Sanat Galerisi</h1>
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Ana Sayfa</a></li>
+            <li><a href="/Home/Galeri">Galeri</a></li>
+            <li><a href="/Home/Nedir">Nedir?</a></li>
+            <li><a asp-action="UnityScene" class="btn btn-primary">Sanal Ziyaret</a></li>
+        </ul>
+    </nav>
+</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanal Sanat Galerisi</title>
+    <link rel="stylesheet" href="~/css/Style.css">
+    <link rel="stylesheet" href="~/js/site.js">
+    <script src="animation.js"></script>
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+    <!---->
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; 2024 Sanal Sanat Galerisi</p>
+    </footer>
+</body>
+</html>
+
+
+

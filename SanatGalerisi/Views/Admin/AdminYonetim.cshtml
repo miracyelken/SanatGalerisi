@@ -1,0 +1,31 @@
+﻿@using SanatGalerisi.Models
+@model List<Admin>
+@{
+    ViewBag.Title = "AdminYonetim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yetkili Kullanıcılar</h2>
+<br />
+<table class="table table-bordered">
+    <tr style="background-color:aquamarine">
+        <th>Id</th>
+        <th>KullanıcıAdı</th>
+        <th>Şifre</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.KullaniciAdi</td>
+            <td>@x.Sifre</td>
+            <td><a href="/Admin/AdminSil/@x.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/AdminGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniAdmin/" class="btn btn-primary">Yeni Yönetici Ekle</a>
+
+

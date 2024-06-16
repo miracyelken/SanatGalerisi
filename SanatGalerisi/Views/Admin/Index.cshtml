@@ -1,0 +1,27 @@
+﻿@using SanatGalerisi.Models
+@model List<Galeri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Galeri Listesi</h2>
+<table class="table table-bordered">
+    <tr style="background-color:aquamarine">
+        <th>Id</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Aciklama</td>
+            <td><a href="/Admin/GaleriSil/@x.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/GaleriGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniGaleri/" class="btn btn-primary">Galeri Ekleme</a>
+

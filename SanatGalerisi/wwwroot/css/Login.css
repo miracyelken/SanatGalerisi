@@ -1,0 +1,120 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Serif", serif;
+    Yazı tipi düzenlemesi
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../images/amggt63.jpg'); /* Arka plan fotoğrafı */
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.1); /* Arkaplanı hafifçe opak yaptık */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Kutuya gölge ekledik */
+    max-width: 400px; /* Formun maksimum genişliğini ayarladık */
+    width: 100%; /* Formu tam genişlikte yapılandırdık */
+    transition: transform 0.3s ease; /* Geçiş efekti ekliyoruz */
+}
+
+    form:hover {
+        transform: scale(1.05); /* Mouse üzerine gelince formu büyütüyoruz */
+        transition: transform 0.3s ease; /* Geçiş efekti ekliyoruz */
+    }
+
+    form:not(:hover) {
+        transform: scale(1); /* Mouse'tan çıkınca formu normal boyuta döndürüyoruz */
+    }
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Başlık font büyüklüğü */
+    color: white;
+}
+
+.p {
+    color: white;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .input-box input {
+        width: 100%;
+        padding: 14px; /* Padding ayarları */
+        font-size: 16px;
+        border: 1px solid #ddd; /* Border rengi değiştirildi */
+        border-radius: 8px; /* Köşeleri yumuşatıldı */
+        outline: none;
+        transition: border-color 0.3s ease; /* Geçiş efekti eklendi */
+    }
+
+        .input-box input:focus {
+            border-color: #007bff; /* Odaklanınca border rengi değişecek */
+        }
+
+    .input-box i {
+        position: absolute;
+        top: 50%; /* İkonu dikey olarak ortala */
+        transform: translateY(-50%); /* İkonun dikey konumunu ayarla */
+        right: 10px;
+        color: #999;
+    }
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #222;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Geçiş efekti eklendi */
+}
+
+    .btn:hover {
+        background-color: grey; /* Üzerine gelince arka plan rengi değişecek */
+    }
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px; /* Link font büyüklüğü */
+}
+
+    .register-link a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Geçiş efekti eklendi */
+    }
+
+        .register-link a:hover {
+            color: #0056b3; /* Üzerine gelince link rengi değişecek */
+            text-decoration: underline;
+        }

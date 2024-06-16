@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AdminPanel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Menüler</h3>
+        <a href="/Admin/AdminYonetim/" class="w3-bar-item w3-button">Admin Ekle/Sil</a>
+        <a href="/Admin/Index/" class="w3-bar-item w3-button">Galeri</a>
+        <a href="/Home/Index/" class="w3-bar-item w3-button">Siteye Dön</a>
+        <a href="/Login/LogOut/" class="w3-bar-item w3-button">Çıkış Yap</a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:25%">
+        <div class="w3-container w3-teal">
+            <h1>Admin Paneli</h1>
+        </div>
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>
+

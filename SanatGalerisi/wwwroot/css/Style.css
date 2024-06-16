@@ -1,0 +1,332 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+}
+
+nav {
+    /* margin-top: 10px;*/
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+    nav ul {
+        list-style-type: none;
+    }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.welcome-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(51, 51, 51, 0.0);
+    color: #fff;
+    padding: 80px;
+    font-family: "Open Sans", monospace;
+    font-size: 100px;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.welcome-description {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+    .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+.translucent-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .translucent-button span {
+        position: relative;
+        z-index: 2;
+        color: white; /* Rengi beyaz olarak ayarla */
+    }
+
+    .translucent-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        transition: left 0.3s ease, background-color 0.3s ease;
+        z-index: 1;
+    }
+
+    .translucent-button:hover::before {
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .translucent-button:hover span {
+        color: white; /* Rengi beyaz olarak kalır */
+    }
+
+.nedir {
+    position: relative;
+}
+
+    .nedir::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .nedir img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(5px);
+    }
+
+.overlay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    max-width: 80%;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+    .overlay p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+.description-section {
+    background-color: #fbfff4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .description-section p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        color: #f5f5f7;
+    }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Arka plan rengi */
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 0 1 calc(50% - 10px); /* Kartların %50 genişliği, aralarında 10px boşluk */
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 400px; /* İstediğiniz yükseklik değeri */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.art-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .art-table th,
+    .art-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .art-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(50% - 10px); /* Ekran küçüldüğünde kartların %50 genişliği */
+    }
+}
+
+
+
+/* Unity Container */
+.unity-container {
+    width: 100%;
+    max-width: 1200px; /* İçeriğin maksimum genişliğini ayarlayabilirsiniz */
+    margin: 0 auto; /* Sayfanın ortalanması için */
+    padding: 20px; /* İçeriğin etrafında boşluk bırakmak için */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Hafif bir gölgelendirme */
+    border-radius: 8px; /* Köşeleri yuvarlama */
+    background-color: #fcf5e5; /* Hafif bir gri tonu arka plan rengi */
+}
+
+    /* H2 Başlık */
+    .unity-container h2 {
+        margin-top: 50px; /* Başlığın üst boşluğu */
+        font-size: 24px; /* Başlık font büyüklüğü */
+        font-weight: 5; /* Font ağırlığı - daha ince görünüm için */
+        color: #1a1a1a; /* Başlık rengi */
+        text-align: center; /* Başlık metni ortala */
+        margin-bottom: 20px; /* Başlığın alt boşluğu */
+        font-family: "Open Sans", Arial, sans-serif; /* Başlık font ailesi */
+        animation: slideInDown 1s cubic-bezier(0.25, 0.1, 0.25, 1); /* Canlı animasyon efekti */
+    }
+
+    /* IFrame */
+    .unity-container iframe {
+        width: 100%; /* IFrame genişliği */
+        height: 600px; /* IFrame yüksekliği */
+        border: none; /* Kenarlık yok */
+    }
+
+/* Başlık için Canlı Animasyon */
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

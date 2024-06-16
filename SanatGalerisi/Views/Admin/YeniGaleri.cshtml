@@ -1,0 +1,18 @@
+﻿@model SanatGalerisi.Models.Galeri
+@{
+    ViewBag.Title = "YeniGaleri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Galeri Ekle</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Fotourl)
+    @Html.TextBoxFor(x => x.Fotourl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

@@ -1,0 +1,22 @@
+﻿@model SanatGalerisi.Models.Galeri
+@{
+    ViewBag.Title = "GaleriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Galeri Güncelle</h2>
+<br />
+@using (Html.BeginForm("GaleriGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly="readonly" })
+    <br />
+    @Html.LabelFor(x => x.Fotourl)
+    @Html.TextBoxFor(x => x.Fotourl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+}
+
